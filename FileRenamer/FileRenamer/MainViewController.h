@@ -9,5 +9,5 @@
 #import <Cocoa/Cocoa.h>
 
 @interface MainViewController : NSViewController
-@property (nonatomic) NSMutableArray *filesArray;
+@property (nonatomic) NSArray *filesArray;
 @end

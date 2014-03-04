@@ -367,7 +367,7 @@
                                     </subviews>
                                 </customView>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDm-gk-YZV">
-                                    <rect key="frame" x="14" y="56" width="82" height="32"/>
+                                    <rect key="frame" x="14" y="93" width="146" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="push" title="Preview" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rlr-VT-WIw">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -378,7 +378,7 @@
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cx7-uQ-Kvd">
-                                    <rect key="frame" x="101" y="56" width="82" height="32"/>
+                                    <rect key="frame" x="159" y="93" width="146" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u0S-85-etT">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -410,9 +410,13 @@ DQ
                 <constraint firstItem="Wj2-DW-r2E" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="uF2-mk-EOg"/>
             </constraints>
         </customView>
-        <arrayController mode="entity" entityName="FRFileObject" usesLazyFetching="YES" editable="NO" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="niF-Oh-hhB" userLabel="fileArrayController">
+        <arrayController objectClassName="FRFileObject" editable="NO" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="niF-Oh-hhB" userLabel="fileArrayController">
             <connections>
-                <binding destination="-2" name="contentArray" keyPath="filesArray" id="zYk-8D-fYb"/>
+                <binding destination="-2" name="contentArray" keyPath="filesArray" id="xMo-Ki-jG0">
+                    <dictionary key="options">
+                        <bool key="NSDeletesObjectsOnRemove" value="YES"/>
+                    </dictionary>
+                </binding>
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="1Cn-Gl-ODK"/>

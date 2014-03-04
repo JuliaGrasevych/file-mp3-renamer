@@ -33,10 +33,10 @@ static NSString * const kMP3FileExtension = @"mp3";
     return self;
 }
 
-- (NSMutableArray *)filesArray
+- (NSArray *)filesArray
 {
     if (!_filesArray) {
-        _filesArray = [NSMutableArray arrayWithCapacity:1];
+        _filesArray = [NSArray array];
     }
     return _filesArray;
 }
