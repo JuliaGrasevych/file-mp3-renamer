@@ -294,6 +294,7 @@
                                                 <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
                                             </dictionary>
                                         </binding>
+                                        <outlet property="delegate" destination="-2" id="jH0-9x-bUy"/>
                                     </connections>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="huw-ux-LCQ">

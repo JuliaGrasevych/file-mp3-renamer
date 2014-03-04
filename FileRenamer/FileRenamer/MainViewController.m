@@ -156,9 +156,7 @@ static NSString * const kMP3FileExtension = @"mp3";
     NSString *previewFormat = self.formatTextField.stringValue;
     __block NSError *renameError = nil;
     [[self selectedFiles] enumerateObjectsUsingBlock:^(FRFileObject *file, NSUInteger idx, BOOL *stop) {
-        if (file.state != FRFileObjectPreviewed) {
-            [file renamingPreviewWithFormat:previewFormat];
-        }
+        [file renamingPreviewWithFormat:previewFormat];
         [file renameWithError:&renameError];
         if (renameError) {
             *stop = YES;
@@ -173,6 +171,17 @@ static NSString * const kMP3FileExtension = @"mp3";
 #pragma mark - Text Field Delegate
 -(BOOL)control:(NSControl *)control textShouldBeginEditing:(NSText *)fieldEditor
 {
+    if (control == self.formatTextField) {
+        return YES;
+    }
     return NO;
 }
+
+-(NSArray *)control:(NSControl *)control textView:(NSTextView *)textView completions:(NSArray *)words forPartialWordRange:(NSRange)charRange indexOfSelectedItem:(NSInteger *)index
+{
+    NSMutableArray *completions = [NSMutableArray arrayWithCapacity:1];
+    // TODO: fill array with appropriate completions
+    return completions;
+}
+
 @end

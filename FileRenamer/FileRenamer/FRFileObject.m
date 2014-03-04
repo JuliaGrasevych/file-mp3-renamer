@@ -34,22 +34,25 @@
 -(BOOL)renameWithError:(NSError * __autoreleasing *) error
 {
     BOOL result = YES;
-    if (!self.previewFilename) {
+    if (!self.previewFilename || self.previewFilename.length==0) {
         result = NO;
         *error = [NSError errorWithDomain:@"Desired filename is not set" code:10 userInfo:nil];
     }
-    NSString *newFilename = [self.previewFilename
-                             stringByAppendingPathExtension:self.fileExtension];
-    
-    NSFileManager *fileManager = [[NSFileManager alloc] init];
-    NSURL *newFileURL = [[self.fileURL URLByDeletingLastPathComponent]
-                         URLByAppendingPathComponent:newFilename];
-    
-    result = [fileManager moveItemAtURL:self.fileURL toURL:newFileURL error:error];
-    if (result) {
-        self.fileURL = newFileURL;
-        self.state = FRFileObjectRenamed;
-        [self updateFileInfo];
+    else {
+        NSString *newFilename = [self.previewFilename
+                                 stringByAppendingPathExtension:self.fileExtension];
+        
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        NSURL *newFileURL = [[self.fileURL URLByDeletingLastPathComponent]
+                             URLByAppendingPathComponent:newFilename];
+        
+        result = [fileManager moveItemAtURL:self.fileURL toURL:newFileURL error:error];
+        
+        if (result) {
+            self.fileURL = newFileURL;
+            self.state = FRFileObjectRenamed;
+            [self updateFileInfo];
+        }
     }
     return result;
 }
@@ -99,7 +102,7 @@
                 mp3InfoString = self.fileMp3Info.year;
             }
             NSRange correctedRange = NSMakeRange(result.range.location+nextLocationAdd, result.range.length);
-            [newFilename replaceCharactersInRange:correctedRange withString:mp3InfoString];
+            [newFilename replaceCharactersInRange:correctedRange withString:mp3InfoString?:@""];
             nextLocationAdd += mp3InfoString.length-result.range.length;
         }
     }];
