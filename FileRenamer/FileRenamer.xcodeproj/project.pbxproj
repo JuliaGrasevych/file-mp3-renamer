@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A60FA03E18BF292900A4ED53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60FA03D18BF292900A4ED53 /* Cocoa.framework */; };
+		A60FA04818BF292900A4ED53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A60FA04618BF292900A4ED53 /* InfoPlist.strings */; };
+		A60FA04A18BF292900A4ED53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA04918BF292900A4ED53 /* main.m */; };
+		A60FA04E18BF292900A4ED53 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A60FA04C18BF292900A4ED53 /* Credits.rtf */; };
+		A60FA05118BF292900A4ED53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA05018BF292900A4ED53 /* AppDelegate.m */; };
+		A60FA05418BF292900A4ED53 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60FA05218BF292900A4ED53 /* MainMenu.xib */; };
+		A60FA05718BF292900A4ED53 /* FileRenamer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */; };
+		A60FA05918BF292900A4ED53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60FA05818BF292900A4ED53 /* Images.xcassets */; };
+		A60FA06018BF292900A4ED53 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60FA05F18BF292900A4ED53 /* XCTest.framework */; };
+		A60FA06118BF292900A4ED53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60FA03D18BF292900A4ED53 /* Cocoa.framework */; };
+		A60FA06918BF292900A4ED53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A60FA06718BF292900A4ED53 /* InfoPlist.strings */; };
+		A60FA06B18BF292900A4ED53 /* FileRenamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA06A18BF292900A4ED53 /* FileRenamerTests.m */; };
+		A60FA07618BF296200A4ED53 /* FRFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA07518BF296200A4ED53 /* FRFileObject.m */; };
+		A60FA07918BF29EA00A4ED53 /* FRMP3Info.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA07818BF29EA00A4ED53 /* FRMP3Info.m */; };
+		A60FA07D18BF310C00A4ED53 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60FA07C18BF310C00A4ED53 /* AVFoundation.framework */; };
+		A60FA08118BF416B00A4ED53 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA07F18BF416B00A4ED53 /* MainViewController.m */; };
+		A60FA08218BF416B00A4ED53 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60FA08018BF416B00A4ED53 /* MainViewController.xib */; };
+		A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A60FA06218BF292900A4ED53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A60FA03218BF292900A4ED53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60FA03918BF292900A4ED53;
+			remoteInfo = FileRenamer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A60FA03A18BF292900A4ED53 /* FileRenamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileRenamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60FA03D18BF292900A4ED53 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A60FA04018BF292900A4ED53 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A60FA04118BF292900A4ED53 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A60FA04218BF292900A4ED53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A60FA04518BF292900A4ED53 /* FileRenamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FileRenamer-Info.plist"; sourceTree = "<group>"; };
+		A60FA04718BF292900A4ED53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A60FA04918BF292900A4ED53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A60FA04B18BF292900A4ED53 /* FileRenamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileRenamer-Prefix.pch"; sourceTree = "<group>"; };
+		A60FA04D18BF292900A4ED53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A60FA04F18BF292900A4ED53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A60FA05018BF292900A4ED53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A60FA05318BF292900A4ED53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FileRenamer.xcdatamodel; sourceTree = "<group>"; };
+		A60FA05818BF292900A4ED53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A60FA05E18BF292900A4ED53 /* FileRenamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileRenamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60FA05F18BF292900A4ED53 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A60FA06618BF292900A4ED53 /* FileRenamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FileRenamerTests-Info.plist"; sourceTree = "<group>"; };
+		A60FA06818BF292900A4ED53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A60FA06A18BF292900A4ED53 /* FileRenamerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileRenamerTests.m; sourceTree = "<group>"; };
+		A60FA07418BF296200A4ED53 /* FRFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRFileObject.h; sourceTree = "<group>"; };
+		A60FA07518BF296200A4ED53 /* FRFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRFileObject.m; sourceTree = "<group>"; };
+		A60FA07718BF29EA00A4ED53 /* FRMP3Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRMP3Info.h; sourceTree = "<group>"; };
+		A60FA07818BF29EA00A4ED53 /* FRMP3Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRMP3Info.m; sourceTree = "<group>"; };
+		A60FA07A18BF2CC800A4ED53 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		A60FA07C18BF310C00A4ED53 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A60FA07E18BF416B00A4ED53 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A60FA07F18BF416B00A4ED53 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A60FA08018BF416B00A4ED53 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		A60FA08318BF64CD00A4ED53 /* NSArray+Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Metadata.h"; sourceTree = "<group>"; };
+		A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Metadata.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A60FA03718BF292900A4ED53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60FA07D18BF310C00A4ED53 /* AVFoundation.framework in Frameworks */,
+				A60FA03E18BF292900A4ED53 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60FA05B18BF292900A4ED53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60FA06118BF292900A4ED53 /* Cocoa.framework in Frameworks */,
+				A60FA06018BF292900A4ED53 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A60FA03118BF292900A4ED53 = {
+			isa = PBXGroup;
+			children = (
+				A60FA04318BF292900A4ED53 /* FileRenamer */,
+				A60FA06418BF292900A4ED53 /* FileRenamerTests */,
+				A60FA03C18BF292900A4ED53 /* Frameworks */,
+				A60FA03B18BF292900A4ED53 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A60FA03B18BF292900A4ED53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA03A18BF292900A4ED53 /* FileRenamer.app */,
+				A60FA05E18BF292900A4ED53 /* FileRenamerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A60FA03C18BF292900A4ED53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA07C18BF310C00A4ED53 /* AVFoundation.framework */,
+				A60FA07A18BF2CC800A4ED53 /* QTKit.framework */,
+				A60FA03D18BF292900A4ED53 /* Cocoa.framework */,
+				A60FA05F18BF292900A4ED53 /* XCTest.framework */,
+				A60FA03F18BF292900A4ED53 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A60FA03F18BF292900A4ED53 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA04018BF292900A4ED53 /* AppKit.framework */,
+				A60FA04118BF292900A4ED53 /* CoreData.framework */,
+				A60FA04218BF292900A4ED53 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A60FA04318BF292900A4ED53 /* FileRenamer */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA04F18BF292900A4ED53 /* AppDelegate.h */,
+				A60FA05018BF292900A4ED53 /* AppDelegate.m */,
+				A60FA05218BF292900A4ED53 /* MainMenu.xib */,
+				A60FA05818BF292900A4ED53 /* Images.xcassets */,
+				A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */,
+				A60FA04418BF292900A4ED53 /* Supporting Files */,
+				A60FA07418BF296200A4ED53 /* FRFileObject.h */,
+				A60FA07518BF296200A4ED53 /* FRFileObject.m */,
+				A60FA07718BF29EA00A4ED53 /* FRMP3Info.h */,
+				A60FA07818BF29EA00A4ED53 /* FRMP3Info.m */,
+				A60FA07E18BF416B00A4ED53 /* MainViewController.h */,
+				A60FA07F18BF416B00A4ED53 /* MainViewController.m */,
+				A60FA08018BF416B00A4ED53 /* MainViewController.xib */,
+				A60FA08318BF64CD00A4ED53 /* NSArray+Metadata.h */,
+				A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */,
+			);
+			path = FileRenamer;
+			sourceTree = "<group>";
+		};
+		A60FA04418BF292900A4ED53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA04518BF292900A4ED53 /* FileRenamer-Info.plist */,
+				A60FA04618BF292900A4ED53 /* InfoPlist.strings */,
+				A60FA04918BF292900A4ED53 /* main.m */,
+				A60FA04B18BF292900A4ED53 /* FileRenamer-Prefix.pch */,
+				A60FA04C18BF292900A4ED53 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A60FA06418BF292900A4ED53 /* FileRenamerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA06A18BF292900A4ED53 /* FileRenamerTests.m */,
+				A60FA06518BF292900A4ED53 /* Supporting Files */,
+			);
+			path = FileRenamerTests;
+			sourceTree = "<group>";
+		};
+		A60FA06518BF292900A4ED53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA06618BF292900A4ED53 /* FileRenamerTests-Info.plist */,
+				A60FA06718BF292900A4ED53 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60FA03918BF292900A4ED53 /* FileRenamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60FA06E18BF292900A4ED53 /* Build configuration list for PBXNativeTarget "FileRenamer" */;
+			buildPhases = (
+				A60FA03618BF292900A4ED53 /* Sources */,
+				A60FA03718BF292900A4ED53 /* Frameworks */,
+				A60FA03818BF292900A4ED53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileRenamer;
+			productName = FileRenamer;
+			productReference = A60FA03A18BF292900A4ED53 /* FileRenamer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A60FA05D18BF292900A4ED53 /* FileRenamerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60FA07118BF292900A4ED53 /* Build configuration list for PBXNativeTarget "FileRenamerTests" */;
+			buildPhases = (
+				A60FA05A18BF292900A4ED53 /* Sources */,
+				A60FA05B18BF292900A4ED53 /* Frameworks */,
+				A60FA05C18BF292900A4ED53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A60FA06318BF292900A4ED53 /* PBXTargetDependency */,
+			);
+			name = FileRenamerTests;
+			productName = FileRenamerTests;
+			productReference = A60FA05E18BF292900A4ED53 /* FileRenamerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60FA03218BF292900A4ED53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Yuliya Grasevych";
+				TargetAttributes = {
+					A60FA05D18BF292900A4ED53 = {
+						TestTargetID = A60FA03918BF292900A4ED53;
+					};
+				};
+			};
+			buildConfigurationList = A60FA03518BF292900A4ED53 /* Build configuration list for PBXProject "FileRenamer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A60FA03118BF292900A4ED53;
+			productRefGroup = A60FA03B18BF292900A4ED53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60FA03918BF292900A4ED53 /* FileRenamer */,
+				A60FA05D18BF292900A4ED53 /* FileRenamerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60FA03818BF292900A4ED53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60FA04818BF292900A4ED53 /* InfoPlist.strings in Resources */,
+				A60FA05918BF292900A4ED53 /* Images.xcassets in Resources */,
+				A60FA08218BF416B00A4ED53 /* MainViewController.xib in Resources */,
+				A60FA04E18BF292900A4ED53 /* Credits.rtf in Resources */,
+				A60FA05418BF292900A4ED53 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60FA05C18BF292900A4ED53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60FA06918BF292900A4ED53 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60FA03618BF292900A4ED53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60FA07618BF296200A4ED53 /* FRFileObject.m in Sources */,
+				A60FA08118BF416B00A4ED53 /* MainViewController.m in Sources */,
+				A60FA07918BF29EA00A4ED53 /* FRMP3Info.m in Sources */,
+				A60FA05718BF292900A4ED53 /* FileRenamer.xcdatamodeld in Sources */,
+				A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */,
+				A60FA05118BF292900A4ED53 /* AppDelegate.m in Sources */,
+				A60FA04A18BF292900A4ED53 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60FA05A18BF292900A4ED53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60FA06B18BF292900A4ED53 /* FileRenamerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A60FA06318BF292900A4ED53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A60FA03918BF292900A4ED53 /* FileRenamer */;
+			targetProxy = A60FA06218BF292900A4ED53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A60FA04618BF292900A4ED53 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A60FA04718BF292900A4ED53 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A60FA04C18BF292900A4ED53 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A60FA04D18BF292900A4ED53 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		A60FA05218BF292900A4ED53 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A60FA05318BF292900A4ED53 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A60FA06718BF292900A4ED53 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A60FA06818BF292900A4ED53 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A60FA06C18BF292900A4ED53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A60FA06D18BF292900A4ED53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A60FA06F18BF292900A4ED53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileRenamer/FileRenamer-Prefix.pch";
+				INFOPLIST_FILE = "FileRenamer/FileRenamer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A60FA07018BF292900A4ED53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileRenamer/FileRenamer-Prefix.pch";
+				INFOPLIST_FILE = "FileRenamer/FileRenamer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A60FA07218BF292900A4ED53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FileRenamer.app/Contents/MacOS/FileRenamer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileRenamer/FileRenamer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FileRenamerTests/FileRenamerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A60FA07318BF292900A4ED53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FileRenamer.app/Contents/MacOS/FileRenamer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileRenamer/FileRenamer-Prefix.pch";
+				INFOPLIST_FILE = "FileRenamerTests/FileRenamerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60FA03518BF292900A4ED53 /* Build configuration list for PBXProject "FileRenamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60FA06C18BF292900A4ED53 /* Debug */,
+				A60FA06D18BF292900A4ED53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60FA06E18BF292900A4ED53 /* Build configuration list for PBXNativeTarget "FileRenamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60FA06F18BF292900A4ED53 /* Debug */,
+				A60FA07018BF292900A4ED53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A60FA07118BF292900A4ED53 /* Build configuration list for PBXNativeTarget "FileRenamerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60FA07218BF292900A4ED53 /* Debug */,
+				A60FA07318BF292900A4ED53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */,
+			);
+			currentVersion = A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */;
+			path = FileRenamer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A60FA03218BF292900A4ED53 /* Project object */;
+}
