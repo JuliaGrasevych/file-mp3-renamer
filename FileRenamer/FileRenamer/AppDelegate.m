@@ -10,7 +10,7 @@
 #import "MainViewController.h"
 
 @interface AppDelegate ()
-@property MainViewController *mainVC;
+@property (nonatomic) MainViewController *mainVC;
 @end
 
 @implementation AppDelegate
@@ -22,8 +22,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.mainVC = [[MainViewController alloc] initWithNibName:NSStringFromClass([MainViewController class]) bundle:nil];
+    self.mainVC.view.frame = ((NSView*)self.window.contentView).bounds;
     [self.window.contentView addSubview:self.mainVC.view];
-    // Insert code here to initialize your application
+
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "yg.FileRenamer" in the user's Application Support directory.

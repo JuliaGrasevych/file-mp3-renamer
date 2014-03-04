@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "FRFileObject.h"
 
-static NSString const *kMP3FileExtension = @"mp3";
+static NSString * const kMP3FileExtension = @"mp3";
 
 @interface MainViewController () <NSTextFieldDelegate>
 @property (strong) IBOutlet NSArrayController *fileArrayController;
