@@ -143,25 +143,13 @@
 		A60FA04318BF292900A4ED53 /* FileRenamer */ = {
 			isa = PBXGroup;
 			children = (
-				A60FA04F18BF292900A4ED53 /* AppDelegate.h */,
-				A60FA05018BF292900A4ED53 /* AppDelegate.m */,
-				A60FA05218BF292900A4ED53 /* MainMenu.xib */,
+				A6F4560618C7570D0015E2B7 /* GUI */,
+				A6F4560518C756E00015E2B7 /* Model */,
+				A6F4560418C756B30015E2B7 /* Views */,
+				A6F4560318C756830015E2B7 /* Helpers */,
+				A6F4560218C756480015E2B7 /* DataModel */,
 				A60FA05818BF292900A4ED53 /* Images.xcassets */,
-				A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */,
 				A60FA04418BF292900A4ED53 /* Supporting Files */,
-				A60FA07418BF296200A4ED53 /* FRFileObject.h */,
-				A60FA07518BF296200A4ED53 /* FRFileObject.m */,
-				A60FA07718BF29EA00A4ED53 /* FRMP3Info.h */,
-				A60FA07818BF29EA00A4ED53 /* FRMP3Info.m */,
-				A60FA07E18BF416B00A4ED53 /* MainViewController.h */,
-				A60FA07F18BF416B00A4ED53 /* MainViewController.m */,
-				A60FA08018BF416B00A4ED53 /* MainViewController.xib */,
-				A60FA08318BF64CD00A4ED53 /* NSArray+Metadata.h */,
-				A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */,
-				A6F455FC18C731320015E2B7 /* FRTextView.h */,
-				A6F455FD18C731320015E2B7 /* FRTextView.m */,
-				A6F455FF18C746750015E2B7 /* FRTextFieldCell.h */,
-				A6F4560018C746750015E2B7 /* FRTextFieldCell.m */,
 			);
 			path = FileRenamer;
 			sourceTree = "<group>";
@@ -194,6 +182,58 @@
 				A60FA06718BF292900A4ED53 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6F4560218C756480015E2B7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		A6F4560318C756830015E2B7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA08318BF64CD00A4ED53 /* NSArray+Metadata.h */,
+				A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A6F4560418C756B30015E2B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6F455FC18C731320015E2B7 /* FRTextView.h */,
+				A6F455FD18C731320015E2B7 /* FRTextView.m */,
+				A6F455FF18C746750015E2B7 /* FRTextFieldCell.h */,
+				A6F4560018C746750015E2B7 /* FRTextFieldCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A6F4560518C756E00015E2B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA07418BF296200A4ED53 /* FRFileObject.h */,
+				A60FA07518BF296200A4ED53 /* FRFileObject.m */,
+				A60FA07718BF29EA00A4ED53 /* FRMP3Info.h */,
+				A60FA07818BF29EA00A4ED53 /* FRMP3Info.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A6F4560618C7570D0015E2B7 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA04F18BF292900A4ED53 /* AppDelegate.h */,
+				A60FA05018BF292900A4ED53 /* AppDelegate.m */,
+				A60FA05218BF292900A4ED53 /* MainMenu.xib */,
+				A60FA07E18BF416B00A4ED53 /* MainViewController.h */,
+				A60FA07F18BF416B00A4ED53 /* MainViewController.m */,
+				A60FA08018BF416B00A4ED53 /* MainViewController.xib */,
+			);
+			path = GUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +388,7 @@
 				A60FA05318BF292900A4ED53 /* Base */,
 			);
 			name = MainMenu.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A60FA06718BF292900A4ED53 /* InfoPlist.strings */ = {
@@ -534,7 +575,8 @@
 				A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */,
 			);
 			currentVersion = A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */;
-			path = FileRenamer.xcdatamodeld;
+			name = FileRenamer.xcdatamodeld;
+			path = ../FileRenamer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

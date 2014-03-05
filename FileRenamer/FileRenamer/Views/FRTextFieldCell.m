@@ -27,5 +27,4 @@ static NSString const* kFieldEditorKey = @"kFieldEditorKey";
     return frFieldEditor;
 }
 
-
 @end
