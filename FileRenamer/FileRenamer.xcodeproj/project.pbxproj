@@ -13,7 +13,6 @@
 		A60FA04E18BF292900A4ED53 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A60FA04C18BF292900A4ED53 /* Credits.rtf */; };
 		A60FA05118BF292900A4ED53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA05018BF292900A4ED53 /* AppDelegate.m */; };
 		A60FA05418BF292900A4ED53 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60FA05218BF292900A4ED53 /* MainMenu.xib */; };
-		A60FA05718BF292900A4ED53 /* FileRenamer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */; };
 		A60FA05918BF292900A4ED53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60FA05818BF292900A4ED53 /* Images.xcassets */; };
 		A60FA06018BF292900A4ED53 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60FA05F18BF292900A4ED53 /* XCTest.framework */; };
 		A60FA06118BF292900A4ED53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60FA03D18BF292900A4ED53 /* Cocoa.framework */; };
@@ -27,6 +26,7 @@
 		A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */; };
 		A6F455FE18C731320015E2B7 /* FRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F455FD18C731320015E2B7 /* FRTextView.m */; };
 		A6F4560118C746750015E2B7 /* FRTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F4560018C746750015E2B7 /* FRTextFieldCell.m */; };
+		A6F4560818C768D90015E2B7 /* formats.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6F4560718C768D90015E2B7 /* formats.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 		A60FA04F18BF292900A4ED53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A60FA05018BF292900A4ED53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A60FA05318BF292900A4ED53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FileRenamer.xcdatamodel; sourceTree = "<group>"; };
 		A60FA05818BF292900A4ED53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A60FA05E18BF292900A4ED53 /* FileRenamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileRenamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60FA05F18BF292900A4ED53 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -75,6 +74,7 @@
 		A6F455FD18C731320015E2B7 /* FRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTextView.m; sourceTree = "<group>"; };
 		A6F455FF18C746750015E2B7 /* FRTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTextFieldCell.h; sourceTree = "<group>"; };
 		A6F4560018C746750015E2B7 /* FRTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTextFieldCell.m; sourceTree = "<group>"; };
+		A6F4560718C768D90015E2B7 /* formats.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = formats.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +162,7 @@
 				A60FA04918BF292900A4ED53 /* main.m */,
 				A60FA04B18BF292900A4ED53 /* FileRenamer-Prefix.pch */,
 				A60FA04C18BF292900A4ED53 /* Credits.rtf */,
+				A6F4560718C768D90015E2B7 /* formats.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,7 +188,6 @@
 		A6F4560218C756480015E2B7 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -317,6 +317,7 @@
 				A60FA08218BF416B00A4ED53 /* MainViewController.xib in Resources */,
 				A60FA04E18BF292900A4ED53 /* Credits.rtf in Resources */,
 				A60FA05418BF292900A4ED53 /* MainMenu.xib in Resources */,
+				A6F4560818C768D90015E2B7 /* formats.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +339,6 @@
 				A60FA07618BF296200A4ED53 /* FRFileObject.m in Sources */,
 				A60FA08118BF416B00A4ED53 /* MainViewController.m in Sources */,
 				A60FA07918BF29EA00A4ED53 /* FRMP3Info.m in Sources */,
-				A60FA05718BF292900A4ED53 /* FileRenamer.xcdatamodeld in Sources */,
 				A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */,
 				A60FA05118BF292900A4ED53 /* AppDelegate.m in Sources */,
 				A60FA04A18BF292900A4ED53 /* main.m in Sources */,
@@ -567,20 +567,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A60FA05518BF292900A4ED53 /* FileRenamer.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */,
-			);
-			currentVersion = A60FA05618BF292900A4ED53 /* FileRenamer.xcdatamodel */;
-			name = FileRenamer.xcdatamodeld;
-			path = ../FileRenamer.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A60FA03218BF292900A4ED53 /* Project object */;
 }
