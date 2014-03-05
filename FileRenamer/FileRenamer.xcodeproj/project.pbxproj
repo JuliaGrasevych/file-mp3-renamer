@@ -25,6 +25,8 @@
 		A60FA08118BF416B00A4ED53 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA07F18BF416B00A4ED53 /* MainViewController.m */; };
 		A60FA08218BF416B00A4ED53 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60FA08018BF416B00A4ED53 /* MainViewController.xib */; };
 		A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */; };
+		A6F455FE18C731320015E2B7 /* FRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F455FD18C731320015E2B7 /* FRTextView.m */; };
+		A6F4560118C746750015E2B7 /* FRTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F4560018C746750015E2B7 /* FRTextFieldCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		A60FA08018BF416B00A4ED53 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A60FA08318BF64CD00A4ED53 /* NSArray+Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Metadata.h"; sourceTree = "<group>"; };
 		A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Metadata.m"; sourceTree = "<group>"; };
+		A6F455FC18C731320015E2B7 /* FRTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTextView.h; sourceTree = "<group>"; };
+		A6F455FD18C731320015E2B7 /* FRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTextView.m; sourceTree = "<group>"; };
+		A6F455FF18C746750015E2B7 /* FRTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTextFieldCell.h; sourceTree = "<group>"; };
+		A6F4560018C746750015E2B7 /* FRTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTextFieldCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,10 @@
 				A60FA08018BF416B00A4ED53 /* MainViewController.xib */,
 				A60FA08318BF64CD00A4ED53 /* NSArray+Metadata.h */,
 				A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */,
+				A6F455FC18C731320015E2B7 /* FRTextView.h */,
+				A6F455FD18C731320015E2B7 /* FRTextView.m */,
+				A6F455FF18C746750015E2B7 /* FRTextFieldCell.h */,
+				A6F4560018C746750015E2B7 /* FRTextFieldCell.m */,
 			);
 			path = FileRenamer;
 			sourceTree = "<group>";
@@ -292,6 +302,8 @@
 				A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */,
 				A60FA05118BF292900A4ED53 /* AppDelegate.m in Sources */,
 				A60FA04A18BF292900A4ED53 /* main.m in Sources */,
+				A6F455FE18C731320015E2B7 /* FRTextView.m in Sources */,
+				A6F4560118C746750015E2B7 /* FRTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +514,7 @@
 				A60FA07018BF292900A4ED53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A60FA07118BF292900A4ED53 /* Build configuration list for PBXNativeTarget "FileRenamerTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +523,7 @@
 				A60FA07318BF292900A4ED53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

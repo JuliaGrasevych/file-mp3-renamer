@@ -10,6 +10,7 @@
 
 @class FRMP3Info;
 
+static NSString *const kFRTagPrefix = @"<";
 static NSString *const kFRTagFormatKeyTitle = @"<title>";
 static NSString *const kFRTagFormatKeyArtist = @"<artist>";
 static NSString *const kFRTagFormatKeyAlbum = @"<album>";
@@ -33,6 +34,7 @@ typedef enum
 @property (nonatomic) FRFileObjectState state;
 
 +(id)fileWithURL:(NSURL *)url;
++(NSArray *)fullTagsList;
 -(void)renamingPreviewWithFormat:(NSString *)format;
 -(BOOL)renameWithError:(NSError __autoreleasing **)error;
 -(void)updateFileInfo;

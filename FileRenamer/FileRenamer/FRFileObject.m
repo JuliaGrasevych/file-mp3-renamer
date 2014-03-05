@@ -9,6 +9,8 @@
 #import "FRFileObject.h"
 #import "FRMP3Info.h"
 
+static NSArray *tagsList = nil;
+
 @implementation FRFileObject
 
 +(id)fileWithURL:(NSURL *)url
@@ -22,6 +24,18 @@
         
     }
     return file;
+}
+
++(NSArray *)fullTagsList
+{
+    if (!tagsList) {
+        tagsList = @[kFRTagFormatKeyAlbum,
+                     kFRTagFormatKeyArtist,
+                     kFRTagFormatKeyTitle,
+                     kFRTagFormatKeyTrack,
+                     kFRTagFormatKeyYear];
+    }
+    return tagsList;
 }
 
 -(void)renamingPreviewWithFormat:(NSString *)format

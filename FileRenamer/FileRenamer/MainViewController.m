@@ -180,7 +180,19 @@ static NSString * const kMP3FileExtension = @"mp3";
 -(NSArray *)control:(NSControl *)control textView:(NSTextView *)textView completions:(NSArray *)words forPartialWordRange:(NSRange)charRange indexOfSelectedItem:(NSInteger *)index
 {
     NSMutableArray *completions = [NSMutableArray arrayWithCapacity:1];
-    // TODO: fill array with appropriate completions
+    NSString *textString = textView.string;
+    
+    // logic goes here
+    [[FRFileObject fullTagsList] enumerateObjectsUsingBlock:^(NSString *tag, NSUInteger idx, BOOL *stop) {
+        
+        NSString *tagSubstring = [tag substringToIndex:charRange.length];
+        NSString *textToComplete = [textString substringWithRange:charRange];
+        if ([textToComplete isEqualToString:tagSubstring]) {
+            
+            [completions addObject:tag];
+        }
+    }];
+
     return completions;
 }
 
