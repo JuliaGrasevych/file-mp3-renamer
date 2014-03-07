@@ -26,7 +26,8 @@
 		A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */; };
 		A6F455FE18C731320015E2B7 /* FRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F455FD18C731320015E2B7 /* FRTextView.m */; };
 		A6F4560118C746750015E2B7 /* FRTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F4560018C746750015E2B7 /* FRTextFieldCell.m */; };
-		A6F4560818C768D90015E2B7 /* formats.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6F4560718C768D90015E2B7 /* formats.strings */; };
+		A6F4561018CA2E960015E2B7 /* formats.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6F4560F18CA2E960015E2B7 /* formats.plist */; };
+		A6F4561318CA2EEF0015E2B7 /* FRFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F4561218CA2EEF0015E2B7 /* FRFormatManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +75,9 @@
 		A6F455FD18C731320015E2B7 /* FRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTextView.m; sourceTree = "<group>"; };
 		A6F455FF18C746750015E2B7 /* FRTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTextFieldCell.h; sourceTree = "<group>"; };
 		A6F4560018C746750015E2B7 /* FRTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTextFieldCell.m; sourceTree = "<group>"; };
-		A6F4560718C768D90015E2B7 /* formats.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = formats.strings; sourceTree = "<group>"; };
+		A6F4560F18CA2E960015E2B7 /* formats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = formats.plist; sourceTree = "<group>"; };
+		A6F4561118CA2EEF0015E2B7 /* FRFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRFormatManager.h; sourceTree = "<group>"; };
+		A6F4561218CA2EEF0015E2B7 /* FRFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRFormatManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +165,7 @@
 				A60FA04918BF292900A4ED53 /* main.m */,
 				A60FA04B18BF292900A4ED53 /* FileRenamer-Prefix.pch */,
 				A60FA04C18BF292900A4ED53 /* Credits.rtf */,
-				A6F4560718C768D90015E2B7 /* formats.strings */,
+				A6F4560F18CA2E960015E2B7 /* formats.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,6 +222,8 @@
 				A60FA07518BF296200A4ED53 /* FRFileObject.m */,
 				A60FA07718BF29EA00A4ED53 /* FRMP3Info.h */,
 				A60FA07818BF29EA00A4ED53 /* FRMP3Info.m */,
+				A6F4561118CA2EEF0015E2B7 /* FRFormatManager.h */,
+				A6F4561218CA2EEF0015E2B7 /* FRFormatManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,7 +322,7 @@
 				A60FA08218BF416B00A4ED53 /* MainViewController.xib in Resources */,
 				A60FA04E18BF292900A4ED53 /* Credits.rtf in Resources */,
 				A60FA05418BF292900A4ED53 /* MainMenu.xib in Resources */,
-				A6F4560818C768D90015E2B7 /* formats.strings in Resources */,
+				A6F4561018CA2E960015E2B7 /* formats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +349,7 @@
 				A60FA04A18BF292900A4ED53 /* main.m in Sources */,
 				A6F455FE18C731320015E2B7 /* FRTextView.m in Sources */,
 				A6F4560118C746750015E2B7 /* FRTextFieldCell.m in Sources */,
+				A6F4561318CA2EEF0015E2B7 /* FRFormatManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

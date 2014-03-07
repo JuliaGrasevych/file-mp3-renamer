@@ -89,6 +89,12 @@ static NSString * const kMP3FileExtension = @"mp3";
     return [NSArray arrayWithArray:filesArray];
 }
 
+-(void)saveFormatTemplate:(NSString *)formatString
+{
+    
+}
+
+#pragma mark - Actions
 - (IBAction)addFile:(id)sender {
     NSOpenPanel *filePicker = [NSOpenPanel openPanel];
     filePicker.canChooseFiles = YES;
