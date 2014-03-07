@@ -281,9 +281,9 @@
                                     <font key="titleFont" size="12" name="LucidaGrande"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwz-VJ-vMl">
-                                    <rect key="frame" x="20" y="234" width="279" height="48"/>
+                                    <rect key="frame" x="20" y="166" width="205" height="116"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Create your own format" drawsBackground="YES" id="Onf-zp-Lnj" customClass="FRTextFieldCell">
+                                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Create your own format" drawsBackground="YES" id="Onf-zp-Lnj" customClass="FRTextFieldCell">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -307,11 +307,11 @@
                                     </textFieldCell>
                                 </textField>
                                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTn-rf-qJW">
-                                    <rect key="frame" x="20" y="141" width="279" height="85"/>
+                                    <rect key="frame" x="233" y="166" width="97" height="116"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="100" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-c7-5ti">
-                                            <rect key="frame" x="1" y="48" width="86" height="17"/>
+                                            <rect key="frame" x="5" y="97" width="86" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="inline" title="Artist" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="8qv-x0-8rY">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -322,7 +322,7 @@
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="Eyi-JN-Rcq">
-                                            <rect key="frame" x="97" y="48" width="86" height="17"/>
+                                            <rect key="frame" x="5" y="73" width="86" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="inline" title="Title" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="GhM-4o-aDK">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -332,19 +332,8 @@
                                                 <action selector="formatItemAction:" target="-2" id="Ukd-69-239"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="102" translatesAutoresizingMaskIntoConstraints="NO" id="was-3G-TqU">
-                                            <rect key="frame" x="191" y="48" width="86" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="inline" title="Album" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="KpX-WN-2tx">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystemBold"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="formatItemAction:" target="-2" id="M0f-jU-VoZ"/>
-                                            </connections>
-                                        </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="103" translatesAutoresizingMaskIntoConstraints="NO" id="TDp-5e-VmH">
-                                            <rect key="frame" x="1" y="19" width="86" height="17"/>
+                                            <rect key="frame" x="5" y="25" width="86" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="inline" title="Track" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="z6I-I7-fZN">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -355,7 +344,7 @@
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="104" translatesAutoresizingMaskIntoConstraints="NO" id="IeJ-eN-E4S">
-                                            <rect key="frame" x="97" y="19" width="86" height="17"/>
+                                            <rect key="frame" x="5" y="1" width="86" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="inline" title="Year" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="C44-nu-lmK">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -363,6 +352,17 @@
                                             </buttonCell>
                                             <connections>
                                                 <action selector="formatItemAction:" target="-2" id="dEe-PS-TE1"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="102" translatesAutoresizingMaskIntoConstraints="NO" id="was-3G-TqU">
+                                            <rect key="frame" x="5" y="49" width="86" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="inline" title="Album" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="KpX-WN-2tx">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="smallSystemBold"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="formatItemAction:" target="-2" id="M0f-jU-VoZ"/>
                                             </connections>
                                         </button>
                                     </subviews>

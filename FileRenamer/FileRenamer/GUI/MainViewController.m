@@ -180,20 +180,36 @@ static NSString * const kMP3FileExtension = @"mp3";
 -(NSArray *)control:(NSControl *)control textView:(NSTextView *)textView completions:(NSArray *)words forPartialWordRange:(NSRange)charRange indexOfSelectedItem:(NSInteger *)index
 {
     NSMutableArray *completions = [NSMutableArray arrayWithCapacity:1];
-    NSString *textString = textView.string;
+    if (charRange.length != 0) {
+        NSString *textString = textView.string;
+        NSString *textToComplete = [textString substringWithRange:charRange];
     
     // logic goes here
     [[FRFileObject fullTagsList] enumerateObjectsUsingBlock:^(NSString *tag, NSUInteger idx, BOOL *stop) {
-        
-        NSString *tagSubstring = [tag substringToIndex:charRange.length];
-        NSString *textToComplete = [textString substringWithRange:charRange];
-        if ([textToComplete isEqualToString:tagSubstring]) {
-            
-            [completions addObject:tag];
+        if (charRange.length <= tag.length) {
+            NSString *tagSubstring = [tag substringToIndex:charRange.length];
+            if ([textToComplete isEqualToString:tagSubstring]) {
+                
+                [completions addObject:tag];
+            }
         }
     }];
-
+    }
+    *index = -1;
     return completions;
+}
+
+-(void)controlTextDidChange:(NSNotification *)obj
+{
+    static BOOL isEditing = NO;
+    if (isEditing) {
+        return;
+    }
+    if (obj.object == self.formatTextField) {
+        isEditing = YES;
+        [self.formatTextField.currentEditor complete:nil];
+        isEditing = NO;
+    }
 }
 
 @end
