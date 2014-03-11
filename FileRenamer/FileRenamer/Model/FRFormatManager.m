@@ -7,7 +7,15 @@
 //
 
 #import "FRFormatManager.h"
+#import "NSString+Hashes.h"
+
 static NSString *const kFRFormatsFilename = @"formats.plist";
+
+@interface FRFormatManager ()
+
+@property (nonatomic) NSArray *predefinedFormats;
+
+@end
 
 @implementation FRFormatManager
 
@@ -15,23 +23,66 @@ static NSString *const kFRFormatsFilename = @"formats.plist";
 {
     self = [super init];
     if (self) {
-        _formatTemplates = [NSMutableArray arrayWithCapacity:1];
-        
+        _formatTemplates = nil;
+        [self loadFormatTemplates];
     }
     return self;
 }
 
--(void)saveFormatTemplate:(NSString *)formatString
+-(BOOL)saveFormatTemplate:(NSString *)formatString
 {
-    
+    BOOL result = NO;
+    NSArray *formatArray = @[formatString];
+    result = [self saveTemplates:formatArray];
+    [self loadFormatTemplates];
+    return result;
 }
 
 -(void)loadFormatTemplates
 {
-    NSDictionary *formats = [NSDictionary dictionaryWithContentsOfFile:kFRFormatsFilename];
+    __block NSMutableDictionary *formats = [NSMutableDictionary dictionaryWithContentsOfFile:kFRFormatsFilename];
     if (formats.count == 0) {
+        BOOL result = [self saveTemplates:self.predefinedFormats];
+        if(result) {
+            
+            [self loadFormatTemplates];
+            return;
+        }
+    }
+    else {
         
+        _formatTemplates = [NSArray arrayWithArray:formats.allValues];
+        return;
     }
 }
 
+-(BOOL)saveTemplates:(NSArray *)templates
+{
+    BOOL result = NO;
+    
+    __block NSMutableDictionary *formats = [NSMutableDictionary dictionaryWithCapacity:1];
+    [formats addEntriesFromDictionary:[NSMutableDictionary dictionaryWithContentsOfFile:kFRFormatsFilename]];
+    
+    [templates enumerateObjectsUsingBlock:^(NSString *template, NSUInteger idx, BOOL *stop) {
+        
+        NSString *formatHash = [template sha1];
+        if (![formats.allKeys containsObject:formatHash]) {
+            
+            [formats setObject:template forKey:formatHash];
+        }
+    }];
+    result = [formats writeToFile:kFRFormatsFilename atomically:YES];
+    
+    return result;
+}
+
+-(NSArray *)predefinedFormats
+{
+    if (!_predefinedFormats) {
+        _predefinedFormats = @[@"<artist> - <title>",
+                               @"<track>. <title>"];
+        
+    }
+    return _predefinedFormats;
+}
 @end

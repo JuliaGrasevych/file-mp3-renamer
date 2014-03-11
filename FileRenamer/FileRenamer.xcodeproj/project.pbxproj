@@ -28,6 +28,7 @@
 		A6F4560118C746750015E2B7 /* FRTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F4560018C746750015E2B7 /* FRTextFieldCell.m */; };
 		A6F4561018CA2E960015E2B7 /* formats.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6F4560F18CA2E960015E2B7 /* formats.plist */; };
 		A6F4561318CA2EEF0015E2B7 /* FRFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F4561218CA2EEF0015E2B7 /* FRFormatManager.m */; };
+		A6F4561618CF176A0015E2B7 /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F4561518CF176A0015E2B7 /* NSString+Hashes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		A6F4560F18CA2E960015E2B7 /* formats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = formats.plist; sourceTree = "<group>"; };
 		A6F4561118CA2EEF0015E2B7 /* FRFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRFormatManager.h; sourceTree = "<group>"; };
 		A6F4561218CA2EEF0015E2B7 /* FRFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRFormatManager.m; sourceTree = "<group>"; };
+		A6F4561418CF176A0015E2B7 /* NSString+Hashes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashes.h"; sourceTree = "<group>"; };
+		A6F4561518CF176A0015E2B7 /* NSString+Hashes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 			children = (
 				A60FA08318BF64CD00A4ED53 /* NSArray+Metadata.h */,
 				A60FA08418BF64CD00A4ED53 /* NSArray+Metadata.m */,
+				A6F4561418CF176A0015E2B7 /* NSString+Hashes.h */,
+				A6F4561518CF176A0015E2B7 /* NSString+Hashes.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				A60FA07618BF296200A4ED53 /* FRFileObject.m in Sources */,
 				A60FA08118BF416B00A4ED53 /* MainViewController.m in Sources */,
 				A60FA07918BF29EA00A4ED53 /* FRMP3Info.m in Sources */,
+				A6F4561618CF176A0015E2B7 /* NSString+Hashes.m in Sources */,
 				A60FA08518BF64CD00A4ED53 /* NSArray+Metadata.m in Sources */,
 				A60FA05118BF292900A4ED53 /* AppDelegate.m in Sources */,
 				A60FA04A18BF292900A4ED53 /* main.m in Sources */,

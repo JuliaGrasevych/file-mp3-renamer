@@ -10,4 +10,5 @@
 
 @interface MainViewController : NSViewController
 @property (nonatomic) NSArray *filesArray;
+@property (nonatomic) NSArray *formatsArray;
 @end

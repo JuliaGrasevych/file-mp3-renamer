@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="fileArrayController" destination="niF-Oh-hhB" id="WHW-zi-uwq"/>
+                <outlet property="formatArrayController" destination="Ndf-TP-a2R" id="Pvj-IA-IsK"/>
                 <outlet property="formatTextField" destination="nwz-VJ-vMl" id="vBY-Kh-r1Z"/>
                 <outlet property="view" destination="1" id="2"/>
             </connections>
@@ -395,11 +396,15 @@ DQ
                                 <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11H-Pe-pyT">
                                     <rect key="frame" x="140" y="286" width="162" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Pre-defined formats" drawsBackground="YES" numberOfVisibleItems="5" id="ooS-GJ-6dA">
+                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Pre-defined formats" drawsBackground="YES" numberOfVisibleItems="5" id="ooS-GJ-6dA">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </comboBoxCell>
+                                    <connections>
+                                        <binding destination="Ndf-TP-a2R" name="content" keyPath="arrangedObjects" id="Yci-xm-gQb"/>
+                                        <outlet property="delegate" destination="-2" id="IIn-hv-7n8"/>
+                                    </connections>
                                 </comboBox>
                             </subviews>
                             <constraints>
@@ -430,6 +435,11 @@ DQ
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="1Cn-Gl-ODK"/>
+        <arrayController objectClassName="NSString" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="Ndf-TP-a2R" userLabel="formatArrayController">
+            <connections>
+                <binding destination="-2" name="contentArray" keyPath="formatsArray" id="6Jh-Gz-sfc"/>
+            </connections>
+        </arrayController>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="8" height="8"/>

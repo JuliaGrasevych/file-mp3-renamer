@@ -8,11 +8,14 @@
 
 #import "MainViewController.h"
 #import "FRFileObject.h"
+#import "FRFormatManager.h"
 
 static NSString * const kMP3FileExtension = @"mp3";
 
-@interface MainViewController () <NSTextFieldDelegate>
+@interface MainViewController () <NSTextFieldDelegate, NSComboBoxDelegate>
 @property (strong) IBOutlet NSArrayController *fileArrayController;
+@property (strong) IBOutlet NSArrayController *formatArrayController;
+@property (nonatomic) FRFormatManager *formatManager;
 - (IBAction)addFile:(id)sender;
 - (IBAction)previewFilename:(id)sender;
 @property (weak) IBOutlet NSTextField *formatTextField;
@@ -29,6 +32,7 @@ static NSString * const kMP3FileExtension = @"mp3";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.
+        _formatManager = [[FRFormatManager alloc] init];
     }
     return self;
 }
@@ -40,11 +44,16 @@ static NSString * const kMP3FileExtension = @"mp3";
     }
     return _filesArray;
 }
+- (NSArray *)formatsArray
+{
+    return self.formatManager.formatTemplates;
+}
 
 -(NSArray *)selectedFiles
 {
     return self.fileArrayController.selectedObjects;
 }
+
 
 -(NSArray *)fetchFilesAtURL:(NSURL *)url
 {
@@ -89,9 +98,13 @@ static NSString * const kMP3FileExtension = @"mp3";
     return [NSArray arrayWithArray:filesArray];
 }
 
+
+
 -(void)saveFormatTemplate:(NSString *)formatString
 {
-    
+    [self.formatManager saveFormatTemplate:formatString];
+    // refresh arrayController
+    [self.formatArrayController setContent:self.formatsArray];
 }
 
 #pragma mark - Actions
@@ -160,6 +173,8 @@ static NSString * const kMP3FileExtension = @"mp3";
 - (IBAction)renameFiles:(NSButton *)sender {
     
     NSString *previewFormat = self.formatTextField.stringValue;
+    [self saveFormatTemplate:previewFormat];
+    
     __block NSError *renameError = nil;
     [[self selectedFiles] enumerateObjectsUsingBlock:^(FRFileObject *file, NSUInteger idx, BOOL *stop) {
         [file renamingPreviewWithFormat:previewFormat];
@@ -218,4 +233,11 @@ static NSString * const kMP3FileExtension = @"mp3";
     }
 }
 
+#pragma mark - ComboBox Delegate
+-(void)comboBoxSelectionDidChange:(NSNotification *)notification
+{
+    NSComboBox *comboBox = notification.object;
+    NSString *selectedFormat = self.formatsArray[[comboBox indexOfSelectedItem]];
+    [self.formatTextField setStringValue:selectedFormat];
+}
 @end

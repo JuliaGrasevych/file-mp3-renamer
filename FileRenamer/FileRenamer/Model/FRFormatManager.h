@@ -10,9 +10,9 @@
 
 @interface FRFormatManager : NSObject
 
-@property (nonatomic, readonly) NSMutableArray *formatTemplates;
+@property (nonatomic, readonly) NSArray *formatTemplates;
 
--(void)saveFormatTemplate:(NSString *)formatString;
+-(BOOL)saveFormatTemplate:(NSString *)formatString;
 
 
 @end
