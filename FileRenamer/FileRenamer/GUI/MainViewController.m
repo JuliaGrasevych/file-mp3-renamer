@@ -237,7 +237,11 @@ static NSString * const kMP3FileExtension = @"mp3";
 -(void)comboBoxSelectionDidChange:(NSNotification *)notification
 {
     NSComboBox *comboBox = notification.object;
-    NSString *selectedFormat = self.formatsArray[[comboBox indexOfSelectedItem]];
-    [self.formatTextField setStringValue:selectedFormat];
+    NSInteger selectedIndex = [comboBox indexOfSelectedItem];
+    if (selectedIndex >= 0) {
+        
+        NSString *selectedFormat = self.formatsArray[selectedIndex];
+        [self.formatTextField setStringValue:selectedFormat];
+    }
 }
 @end
