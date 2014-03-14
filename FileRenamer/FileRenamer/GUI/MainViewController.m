@@ -46,7 +46,10 @@ static NSString * const kMP3FileExtension = @"mp3";
 }
 - (NSArray *)formatsArray
 {
-    return self.formatManager.formatTemplates;
+    if (!_formatsArray) {
+        _formatsArray = [NSArray arrayWithArray:self.formatManager.formatTemplates];
+    }
+    return _formatsArray;
 }
 
 -(NSArray *)selectedFiles
@@ -104,7 +107,18 @@ static NSString * const kMP3FileExtension = @"mp3";
 {
     [self.formatManager saveFormatTemplate:formatString];
     // refresh arrayController
-    [self.formatArrayController setContent:self.formatsArray];
+//    [self.formatArrayController setContent:self.formatsArray];
+    
+    NSArray *newEntries = [self.formatManager.formatTemplates filteredArrayUsingPredicate:({
+        NSPredicate *filterPredicate = [NSPredicate predicateWithBlock:^BOOL(NSString *evaluatedObject, NSDictionary *bindings) {
+            return ![self.formatsArray containsObject:evaluatedObject];
+        }];
+        filterPredicate;
+    })];
+    if (newEntries.count) {
+        [self.formatArrayController addObject:newEntries[0]];
+    }
+    
 }
 
 #pragma mark - Actions

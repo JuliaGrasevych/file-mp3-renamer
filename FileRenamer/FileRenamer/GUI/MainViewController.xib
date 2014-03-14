@@ -406,6 +406,28 @@ DQ
                                         <outlet property="delegate" destination="-2" id="IIn-hv-7n8"/>
                                     </connections>
                                 </comboBox>
+                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-Vf-fnQ">
+                                    <rect key="frame" x="138" y="306" width="164" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y46-1O-YiG">
+                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                        <menu key="menu" title="OtherViews" id="g8T-rp-1Vs">
+                                            <items>
+                                                <menuItem title="Item 1" id="X1P-Kg-OUw"/>
+                                                <menuItem title="Item 2" id="mXS-Ud-CgD"/>
+                                                <menuItem title="Item 3" id="uRz-Vx-R9h"/>
+                                            </items>
+                                        </menu>
+                                    </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="Ndf-TP-a2R" name="content" keyPath="arrangedObjects" id="rxn-7q-RVT">
+                                            <dictionary key="options">
+                                                <bool key="NSInsertsNullPlaceholder" value="YES"/>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </popUpButton>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="350" id="ZEA-w7-o0R"/>
@@ -435,7 +457,7 @@ DQ
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="1Cn-Gl-ODK"/>
-        <arrayController objectClassName="NSString" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="Ndf-TP-a2R" userLabel="formatArrayController">
+        <arrayController objectClassName="NSString" editable="NO" preservesSelection="NO" selectsInsertedObjects="NO" automaticallyRearrangesObjects="YES" id="Ndf-TP-a2R" userLabel="formatArrayController">
             <connections>
                 <binding destination="-2" name="contentArray" keyPath="formatsArray" id="6Jh-Gz-sfc"/>
             </connections>
