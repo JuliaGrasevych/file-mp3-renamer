@@ -22,6 +22,7 @@ static NSString * const kMP3FileExtension = @"mp3";
 @property (nonatomic) NSString *filenameFormat;
 - (IBAction)formatItemAction:(NSButton *)sender;
 - (IBAction)renameFiles:(NSButton *)sender;
+- (IBAction)selectFormat:(NSPopUpButton *)sender;
 
 @end
 
@@ -35,6 +36,14 @@ static NSString * const kMP3FileExtension = @"mp3";
         _formatManager = [[FRFormatManager alloc] init];
     }
     return self;
+}
+
+-(void)loadView
+{
+    [super loadView];
+    // by default 0 format row is selected
+    NSString *selectedFormat = self.formatsArray[0];
+    [self.formatTextField setStringValue:selectedFormat];
 }
 
 - (NSArray *)filesArray
@@ -203,6 +212,16 @@ static NSString * const kMP3FileExtension = @"mp3";
     }
 }
 
+- (IBAction)selectFormat:(NSPopUpButton *)sender
+{
+    NSInteger selectedIndex = [sender indexOfSelectedItem];
+    if (selectedIndex >= 0) {
+        
+        NSString *selectedFormat = self.formatsArray[selectedIndex];
+        [self.formatTextField setStringValue:selectedFormat];
+    }
+}
+
 #pragma mark - Text Field Delegate
 -(BOOL)control:(NSControl *)control textShouldBeginEditing:(NSText *)fieldEditor
 {
@@ -247,15 +266,4 @@ static NSString * const kMP3FileExtension = @"mp3";
     }
 }
 
-#pragma mark - ComboBox Delegate
--(void)comboBoxSelectionDidChange:(NSNotification *)notification
-{
-    NSComboBox *comboBox = notification.object;
-    NSInteger selectedIndex = [comboBox indexOfSelectedItem];
-    if (selectedIndex >= 0) {
-        
-        NSString *selectedFormat = self.formatsArray[selectedIndex];
-        [self.formatTextField setStringValue:selectedFormat];
-    }
-}
 @end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="1070" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainViewController">
@@ -393,25 +393,12 @@ DQ
                                         <action selector="renameFiles:" target="-2" id="fji-GX-Y8z"/>
                                     </connections>
                                 </button>
-                                <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11H-Pe-pyT">
-                                    <rect key="frame" x="140" y="286" width="162" height="26"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Pre-defined formats" drawsBackground="YES" numberOfVisibleItems="5" id="ooS-GJ-6dA">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </comboBoxCell>
-                                    <connections>
-                                        <binding destination="Ndf-TP-a2R" name="content" keyPath="arrangedObjects" id="Yci-xm-gQb"/>
-                                        <outlet property="delegate" destination="-2" id="IIn-hv-7n8"/>
-                                    </connections>
-                                </comboBox>
                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-Vf-fnQ">
-                                    <rect key="frame" x="138" y="306" width="164" height="26"/>
+                                    <rect key="frame" x="138" y="287" width="164" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y46-1O-YiG">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="g8T-rp-1Vs">
                                             <items>
                                                 <menuItem title="Item 1" id="X1P-Kg-OUw"/>
@@ -421,9 +408,11 @@ DQ
                                         </menu>
                                     </popUpButtonCell>
                                     <connections>
-                                        <binding destination="Ndf-TP-a2R" name="content" keyPath="arrangedObjects" id="rxn-7q-RVT">
+                                        <action selector="selectFormat:" target="-2" id="uuD-CG-dA6"/>
+                                        <binding destination="Ndf-TP-a2R" name="content" keyPath="arrangedObjects" id="KcX-re-c1x">
                                             <dictionary key="options">
-                                                <bool key="NSInsertsNullPlaceholder" value="YES"/>
+                                                <string key="NSNoSelectionPlaceholder">Pre-defined formats</string>
+                                                <string key="NSNullPlaceholder">Pre-defined formats</string>
                                             </dictionary>
                                         </binding>
                                     </connections>
