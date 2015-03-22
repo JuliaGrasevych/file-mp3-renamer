@@ -1,0 +1,1 @@
+This Mac OS application gives you chance to rename your music mp3 files by using its ID3 tags.
